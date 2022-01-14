@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Party Carrito</title>
+
+    <link rel="stylesheet" href="https://bootswatch.com/5/vapor/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body{
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-4">
+      <a href="/index.html"><i class="fa fa-chevron-circle-left" style="font-size: 30px;"></i></a>
+      
+      <h1 class="display-4 text-center">Carrito</h1>
+      <p class="text-center mb-5">Antes de confirmar revisa si tu pedido está completo</p>
+      
+    
+      <div class="card border-success mb-3 " >
+        <table class="table table-hover ">
+          <thead>
+            <tr class="table-active">
+              <th scope="col" class="text-success"><h5>Producto</h5> </th>
+              <th scope="col"  class="text-success"><h5>Cantidad</h5> </th>
+              <th scope="col" class="text-success"><h5>Precio</h5> </th>
+              <th scope="col" class="text-success"><h5>Subtotal</h5> </th>
+              <th scope="col" class="text-success"></th>
+            </tr>
+          </thead>
+          <tbody id="carritoList">
+            
+           
+          </tbody>
+          <tr class="table-active">
+            <th scope="row"></th>
+            <td></td>
+            <td class="text-success"><h5>TOTAL</h5> </td>
+            <td class="text-success"><h5 id="total"></h5> </td>
+            <td></td>
+          </tr>
+        </table>
+        
+
+      <form class="d-flex justify-content-center " id="userForm">
+         <fieldset style="width: 40%;">
+        <div class="form-group">
+          <label for="exampleInputEmail1" class="form-label mt-4">Nombre</label>
+          <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp" placeholder="Introduce Nombre">
+          <small id="emailHelp" class="form-text text-muted">Nombre de la persona quien recibe</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1" class="form-label mt-4">Dirección</label>
+          <input type="text" class="form-control" id="direccion" aria-describedby="emailHelp" placeholder="Introduce Direccion">
+          <small id="emailHelp" class="form-text text-muted">Direccion de entrega</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1" class="form-label mt-4">Telefono</label>
+          <input type="number" class="form-control" id="telefono" aria-describedby="emailHelp" placeholder="Introduce Telefono">
+          <small id="emailHelp" class="form-text text-muted">Telefono de contacto</small>
+        </div>
+        <button type="submit" class="btn btn-primary mt-4 mb-5" id="confirmar">Confirmar</button>
+      </fieldset>
+     
+      </form>
+    </div>
+    </div>
+
+    <!--=================Modal============-->
+    <div class="modal  show " id="ventanaModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Compra Realizada</h5>
+            
+              <span aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="modal-body" id="modal-body">
+            <p><span id="nombreModal"></span> gracias por tu pedido, 
+            tu pedido esta en camino a la dirección <span id="direccionModal"></span>, 
+            Licores Party te decea felices fiestas</p>
+            
+          </div>
+          <div class="modal-footer">
+            
+           
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="/carrito.js"></script>
+</body>
+</html>

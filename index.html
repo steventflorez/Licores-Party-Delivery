@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Licores Party</title>
+
+    <!--============Estilos de Boostrap============-->
+    <link rel="stylesheet" href="https://bootswatch.com/5/vapor/bootstrap.min.css">
+    <!--============Iconos============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body{
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4" id="container">
+        <h1 class="display-4 text-center"> Licores Party </h1>
+        <p class="text-center">Los mejores precios y productos de calidad en la puerta de tu casa,
+             agrega al carrito los productos que deceas adquirir
+            <span class="d-flex justify-content-end"> <a href="/carrito.html"><i class="fa fa-shopping-cart text-warning" style="font-size:24px"></i></a> 
+                 <span class="badge rounded-pill bg-danger" id="contador" style="margin-left: 5px;">0</span>
+            </span>
+        </p> 
+
+        <div class="row" id="container_productos">
+            
+        </div>
+
+        <!--=================Modal============-->
+        <div class="modal  show " id="ventanaModal">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Agregar al carrito</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="cerrarModal">
+                    <span aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="modal-body" id="modal-body">
+                  <div class="row">
+                      <div class="col-3"><h5>Producto:</h5></div>
+                      <div class="col-4" id="ArticuloCelect"></div>
+                  </div>
+                  <br>
+                  <div class="row" style="width: 80%;">
+                      <div class="col-6"><h5>Cantidad:</h5></div>
+                      <div class="col-2">
+                          <button type="button" class="btn btn-outline-light" id="resta"><i class="fa  fa-minus-square text-info"></i></button></div>
+                      <div class="col-2 d-flex justify-content-center align-items-center" id="cantidad">1</div>
+                      <div class="col-2"><button type="button" class="btn btn-outline-light" id="suma"><i class="fa fa-plus-square text-info"></i></button></div>
+                  </div>
+                  <br>
+                  <div class="card"></div>
+                  <br>
+                  <div class="row ">
+                    <div class="col-6"><h5>TOTAL:</h5></div>
+                    <div class="col-4" id="total"></div>
+                  </div>
+                  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" id="confirmar">Confirmar</button>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="cloceModal">Cancelar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+             
+             
+    </div>
+    
+    <script src="/app.js"></script>
+</body>
+</html>
